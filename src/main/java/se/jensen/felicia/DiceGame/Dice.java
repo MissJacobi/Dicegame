@@ -7,7 +7,7 @@ public class Dice {
 
     public void playerScore(Player player) {
         int sum = 0;
-        for(int i = 0; i < 2 ; i++) ;
+        for(int i = 0; i < 2 ; i++)
         {
             int roll = random.nextInt(1, 7);
             player.addToScore(roll);

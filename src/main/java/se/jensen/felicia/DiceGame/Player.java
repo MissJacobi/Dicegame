@@ -1,6 +1,5 @@
 package se.jensen.felicia.DiceGame;
 
-import java.util.Scanner;
 
 public class Player {
     private String firstname;
@@ -8,8 +7,6 @@ public class Player {
     private int score;
 
     public Player(){
-        this.firstname = firstname;
-        this.lastname = lastname;
         this.score = 0;
     }
     public void setFirstname(String firstname) {
@@ -25,15 +22,15 @@ public class Player {
     }
 
     public void addToScore(int value){
-        this.score = value;
+        this.score += value;
     }
 
     public int getScore(){
         return score;
     }
 
-    public void getFullName() {
-        System.out.println(firstname +" "+ lastname);
+    public String getFullName() {
+        return firstname +" "+ lastname;
     }
 
 
