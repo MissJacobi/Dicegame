@@ -13,20 +13,50 @@ public class Game {
         Player player1 = new Player();
         Player player2 = new Player();
 
-        System.out.println("Player one enter your firstname :");
-        String firstname1 = scanner.nextLine();
-        player1.setFirstname(firstname1);
-        System.out.println("Player one enter your lastname:");
-        String lastname1 = scanner.nextLine();
-        player1.setLastname(lastname1);
+        while (true) {
+            try {
+                System.out.println("Player one enter your firstname :");
+                String firstname1 = scanner.nextLine();
+                player1.setFirstname(firstname1);
+                break;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
+        while (true) {
+            try {
+                System.out.println("Player one enter your lastname:");
+                String lastname1 = scanner.nextLine();
+                player1.setLastname(lastname1);
+                break;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
 
 
-        System.out.println("Player two enter your firstname:");
-        String firstname2 = scanner.nextLine();
-        player2.setFirstname(firstname2);
-        System.out.println("Player two enter your lastname:");
-        String lastname2 = scanner.nextLine();
-        player2.setLastname(lastname2);
+        while (true) {
+            try {
+                System.out.println("Player two enter your firstname:");
+                String firstname2 = scanner.nextLine();
+                player2.setFirstname(firstname2);
+                break;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
+        while (true) {
+            try {
+                System.out.println("Player two enter your lastname:");
+                String lastname2 = scanner.nextLine();
+                player2.setLastname(lastname2);
+                break;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
 
         System.out.println("Write Play to start game or Quit to end.");
         String play = scanner.nextLine();
@@ -47,6 +77,6 @@ public class Game {
         } else if (play.equals("Quit")) {
             System.out.println("Game ended. ");
         }
-        scanner.close();
+            scanner.close();
     }
 }

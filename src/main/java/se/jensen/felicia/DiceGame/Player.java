@@ -11,13 +11,13 @@ public class Player {
     }
     public void setFirstname(String firstname) {
         if (firstname == null || firstname.isEmpty())
-            throw new IllegalArgumentException("Enter a name!");
+           throw new IllegalArgumentException ("Enter a name!");
         this.firstname = firstname;
     }
 
     public void setLastname(String lastname) {
         if (lastname == null || lastname.isEmpty())
-            throw new IllegalArgumentException("Enter a name!");
+            throw new IllegalArgumentException ("Enter a name!");
         this.lastname = lastname;
     }
 
